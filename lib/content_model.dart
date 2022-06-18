@@ -20,7 +20,7 @@ List<UnbordingContent> contents = [
           'Find experienced spesialist doctors with expert ratings and reviews and book your appointments hassle-free'),
   UnbordingContent(
       title: 'Book face-to-face appointments',
-      image: 'images/—Pngtree—doctors provide solutions for smart_6564089.png',
+      image: 'images/doctors_provide.png',
       discription:
           'Can`t go to the hospital? Book video call appintments with your doctor within the app in few minutes.'),
 ];

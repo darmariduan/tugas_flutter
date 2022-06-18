@@ -11,14 +11,13 @@ class SplashScreen extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Expanded(
-              child: LottieBuilder.network(
-                  'https://assets4.lottiefiles.com/packages/lf20_czuo1i1a.json'),
+              child: LottieBuilder.asset('lottie/77192-search-doctor.json'),
             ),
           ],
         ),
         nextScreen: Onboarding(),
-        duration: 3000,
-        backgroundColor: Color.fromARGB(255, 24, 90, 212),
+        duration: 2000,
+        backgroundColor: Color.fromARGB(255, 53, 117, 236),
         splashTransition: SplashTransition.scaleTransition);
   }
 }
