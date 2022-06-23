@@ -3,7 +3,7 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:tugas_flutter/message1.dart';
 import 'package:tugas_flutter/onboarding.dart';
 
-class Avalaible extends StatelessWidget {
+class Avalaible extends StatefulWidget {
   final String imageUrl, name, skill;
   final bool status;
 
@@ -12,6 +12,12 @@ class Avalaible extends StatelessWidget {
       required this.name,
       required this.skill,
       required this.status});
+
+  @override
+  State<Avalaible> createState() => _AvalaibleState();
+}
+
+class _AvalaibleState extends State<Avalaible> {
   @override
   Widget build(BuildContext context) {
     return Padding(
@@ -21,7 +27,7 @@ class Avalaible extends StatelessWidget {
       child: Row(
         children: [
           Image.asset(
-            imageUrl,
+            widget.imageUrl,
             width: 55,
             height: 55,
           ),
@@ -39,18 +45,18 @@ class Avalaible extends StatelessWidget {
               //     );
               //   },
               Text(
-                name,
+                widget.name,
                 style: GoogleFonts.poppins(fontWeight: FontWeight.bold),
               ),
               // ),
               Text(
-                skill,
+                widget.skill,
                 style: GoogleFonts.poppins(color: Colors.grey),
               ),
             ],
           ),
           Spacer(),
-          Icon(Icons.circle, color: status ? Colors.green : Colors.red),
+          Icon(Icons.circle, color: widget.status ? Colors.green : Colors.red),
         ],
       ),
     );
