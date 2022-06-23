@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:tugas_flutter/message1.dart';
+import 'package:tugas_flutter/onboarding.dart';
 
 class Avalaible extends StatelessWidget {
   final String imageUrl, name, skill;
@@ -29,10 +31,18 @@ class Avalaible extends StatelessWidget {
           Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
+              // TextButton(
+              //   onPressed: () {
+              //     Navigator.push(
+              //       context,
+              //       MaterialPageRoute(builder: (context) => Message()),
+              //     );
+              //   },
               Text(
                 name,
                 style: GoogleFonts.poppins(fontWeight: FontWeight.bold),
               ),
+              // ),
               Text(
                 skill,
                 style: GoogleFonts.poppins(color: Colors.grey),
