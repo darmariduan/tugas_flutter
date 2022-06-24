@@ -78,40 +78,42 @@ class Message2 extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.end,
           crossAxisAlignment: CrossAxisAlignment.end,
           children: [
-            Container(
-              padding: EdgeInsets.symmetric(
-                horizontal: 20,
-                vertical: 12,
-              ),
-              decoration: BoxDecoration(
-                color: Color(0xffFFFFFF),
-                borderRadius: BorderRadius.only(
-                  topRight: Radius.circular(20),
-                  topLeft: Radius.circular(20),
-                  bottomRight: Radius.circular(20),
+            Expanded(
+              child: Container(
+                padding: EdgeInsets.symmetric(
+                  horizontal: 20,
+                  vertical: 12,
                 ),
-              ),
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.end,
-                children: [
-                  Text(
-                    text,
-                    style: GoogleFonts.poppins(
-                      fontSize: 16,
-                      color: Color(0xff505C6B),
+                decoration: BoxDecoration(
+                  color: Color(0xffFFFFFF),
+                  borderRadius: BorderRadius.only(
+                    topRight: Radius.circular(20),
+                    topLeft: Radius.circular(20),
+                    bottomRight: Radius.circular(20),
+                  ),
+                ),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.end,
+                  children: [
+                    Text(
+                      text,
+                      style: GoogleFonts.poppins(
+                        fontSize: 16,
+                        color: Color(0xff505C6B),
+                      ),
                     ),
-                  ),
-                  SizedBox(
-                    height: 5,
-                  ),
-                  Text(
-                    time,
-                    style: GoogleFonts.poppins(
-                      fontWeight: FontWeight.w300,
-                      color: Color(0xff505C6B),
+                    SizedBox(
+                      height: 5,
                     ),
-                  ),
-                ],
+                    Text(
+                      time,
+                      style: GoogleFonts.poppins(
+                        fontWeight: FontWeight.w300,
+                        color: Color(0xff505C6B),
+                      ),
+                    ),
+                  ],
+                ),
               ),
             ),
             SizedBox(
@@ -190,17 +192,19 @@ class Message2 extends StatelessWidget {
           padding: EdgeInsets.symmetric(
             horizontal: 30,
           ),
-          child: Column(
-            children: [
-              SizedBox(
-                height: 30,
-              ),
-              senderBubble(
-                imageUrl: 'images/client.png',
-                text: 'Hallo Dokter Cantik',
-                time: '11:08',
-              ),
-            ],
+          child: SingleChildScrollView(
+            child: Column(
+              children: [
+                SizedBox(
+                  height: 30,
+                ),
+                senderBubble(
+                  imageUrl: 'images/client.png',
+                  text: 'Hallo Dokter Cantik',
+                  time: '11:08',
+                ),
+              ],
+            ),
           ),
         ),
       );

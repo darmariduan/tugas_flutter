@@ -78,40 +78,42 @@ class Message1 extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.end,
           crossAxisAlignment: CrossAxisAlignment.end,
           children: [
-            Container(
-              padding: EdgeInsets.symmetric(
-                horizontal: 20,
-                vertical: 12,
-              ),
-              decoration: BoxDecoration(
-                color: Color(0xffFFFFFF),
-                borderRadius: BorderRadius.only(
-                  topRight: Radius.circular(20),
-                  topLeft: Radius.circular(20),
-                  bottomRight: Radius.circular(20),
+            Expanded(
+              child: Container(
+                padding: EdgeInsets.symmetric(
+                  horizontal: 20,
+                  vertical: 12,
                 ),
-              ),
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.end,
-                children: [
-                  Text(
-                    text,
-                    style: GoogleFonts.poppins(
-                      fontSize: 16,
-                      color: Color(0xff505C6B),
+                decoration: BoxDecoration(
+                  color: Color(0xffFFFFFF),
+                  borderRadius: BorderRadius.only(
+                    topRight: Radius.circular(20),
+                    topLeft: Radius.circular(20),
+                    bottomRight: Radius.circular(20),
+                  ),
+                ),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.end,
+                  children: [
+                    Text(
+                      text,
+                      style: GoogleFonts.poppins(
+                        fontSize: 16,
+                        color: Color(0xff505C6B),
+                      ),
                     ),
-                  ),
-                  SizedBox(
-                    height: 5,
-                  ),
-                  Text(
-                    time,
-                    style: GoogleFonts.poppins(
-                      fontWeight: FontWeight.w300,
-                      color: Color(0xff505C6B),
+                    SizedBox(
+                      height: 5,
                     ),
-                  ),
-                ],
+                    Text(
+                      time,
+                      style: GoogleFonts.poppins(
+                        fontWeight: FontWeight.w300,
+                        color: Color(0xff505C6B),
+                      ),
+                    ),
+                  ],
+                ),
               ),
             ),
             SizedBox(
@@ -190,32 +192,34 @@ class Message1 extends StatelessWidget {
           padding: EdgeInsets.symmetric(
             horizontal: 30,
           ),
-          child: Column(
-            children: [
-              SizedBox(
-                height: 30,
-              ),
-              senderBubble(
-                imageUrl: 'images/client.png',
-                text: 'Hallo Dok',
-                time: '22:08',
-              ),
-              receiverBubble(
-                imageUrl: 'images/dokter1.png',
-                text: 'Ada yang bisa saya bantu?',
-                time: '22:10',
-              ),
-              senderBubble(
-                imageUrl: 'images/client.png',
-                text: 'Kenapa RRQ Kalah dok?',
-                time: '22:11',
-              ),
-              receiverBubble(
-                imageUrl: 'images/dokter1.png',
-                text: 'pertanyaan yang sulit untuk saya jawab',
-                time: '22:12',
-              ),
-            ],
+          child: SingleChildScrollView(
+            child: Column(
+              children: [
+                SizedBox(
+                  height: 30,
+                ),
+                senderBubble(
+                  imageUrl: 'images/client.png',
+                  text: 'Hallo Dok',
+                  time: '22:08',
+                ),
+                receiverBubble(
+                  imageUrl: 'images/dokter1.png',
+                  text: 'Ada yang bisa saya bantu?',
+                  time: '22:10',
+                ),
+                senderBubble(
+                  imageUrl: 'images/client.png',
+                  text: 'Kenapa RRQ Kalah dok?',
+                  time: '22:11',
+                ),
+                receiverBubble(
+                  imageUrl: 'images/dokter1.png',
+                  text: 'pertanyaan yang sulit untuk saya jawab',
+                  time: '22:12',
+                ),
+              ],
+            ),
           ),
         ),
       );
