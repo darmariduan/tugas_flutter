@@ -215,7 +215,7 @@ class Message1 extends StatelessWidget {
                 ),
                 receiverBubble(
                   imageUrl: 'images/dokter1.png',
-                  text: 'pertanyaan yang sulit untuk saya jawab',
+                  text: 'pertanyaan yang sulit\nuntuk saya jawab',
                   time: '22:12',
                 ),
               ],
